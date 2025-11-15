@@ -1,15 +1,81 @@
-# 4rass
+# 🎓 Coursera Downloader
 
-This is the commands i used to run on macOS (zsh): 
+A Python-based tool for downloading Coursera course content locally on macOS.
 
-create folder where i want the project and files, then git clone.
+## 📋 Prerequisites
 
-cd to project, then:
+- macOS with Zsh
+- Python 3.x
+- Chrome browser (for cookie extraction)
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+```bash
+# Create and navigate to your project folder
+mkdir coursera-downloader
+cd coursera-downloader
+
+# Clone the repository
+git clone https://github.com/4rass/coursera-downloader.git
+cd coursera-downloader
+```
+
+### 2. Set Up Virtual Environment
+```bash
+# Create virtual environment
 python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
 
+# Activate virtual environment
+source .venv/bin/activate
+
+# Upgrade pip
+python -m pip install --upgrade pip
+```
+
+### 3. Install Dependencies
+```bash
 pip install -e .
+```
+
+## 🔑 Getting Your Authentication Cookie
+
+1. Open Chrome and log into Coursera
+2. Open Developer Tools (⌘ + Option + I)
+3. Go to **Application** tab → **Cookies** → `https://www.coursera.org`
+4. Find and copy the `CAUTH` cookie value
+
+## 💻 Usage
+
+Run the downloader with your authentication cookie:
+```bash
+cs-dlp --cauth YOUR_CAUTH_COOKIE_HERE --specialization SPECIALIZATION_SLUG
+```
+
+### Example:
+```bash
+cs-dlp --cauth asddaad—21ookdcFGGjs21lGMtUdpie8w.6a12xssPLZquSasdiG$#1_FrMnOboGLK2rNXCCjiki35a6d/=/*592dSdEisadbBSy4RjsLZmm08lFyfIB861plsa#@11SjAlrQ-6OhDRp1GLboAHREu-ZxaQgUBUK2FE2gR4cBJgTd8WDvwTzCED3Pf-t-GOGhauejhaVsdaoSFdLDvrP43UInmS4gtBAj2roUAvIODAjQipphEke3jLiMTXc0wNpQ7Kldo4ras4ras4oilLDccX1M-BI2-oYmnsPehsuI-pnZzO_W_L5YZqOJ62mGy1ycvp-SfyYsd@ssdXF4rassOLhYgO --specialization ai-agents-python
+```
+
+## 📝 Notes
+
+- ⚠️ **Security**: Never share your `CAUTH` cookie publicly
+- 🔄 Cookies expire periodically - you may need to refresh them
+- 📂 Downloaded content will be saved in your current directory
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+MIT
+
+## ⭐ Acknowledgments
+
+Built on top of [cs-dlp](https://github.com/Azeura/cs-dlp)
+
+---
 
 Confirm installation and view help:
 cs-dlp --help
@@ -23,13 +89,6 @@ cs-dlp --cauth-auto chrome modelthinking-004
 cs-dlp --cauth-auto chrome --resume sdn1-001
 
 
-Final command with coockie that copied from Chrome, coockie name 'CAUTH'
-and i insert to the next step.
-
-cs-dlp --cauth q5zLj7psXsiklRaUaWVImEtJBRch2-wfZFwCCV9dYM9KCtgN-bdIMYXjm5oJ-PpCjmwz7H1ml3QZ-Jvqasddaad—21ookdcFGGjs21lGMtUdpie8w.6a12xssPLZquSasdiG$#1_FrMnOboGLK2rNXCCjiki35a6d/=/*592dSdEisadbBSy4RjsLZmm08lFyfIB861plsa#@11SjAlrQ-6OhDRp1GLboAHREu-ZxaQgUBUK2FE2gR4cBJgTd8WDvwTzCED3Pf-t-GOGhauejhaVsdaoSFdLDvrP43UInmS4gtBAj2roUAvIODAjQipphEke3jLiMTXc0wNpQ7Kldo4ras4ras4oilLDccX1M-BI2-oYmnsPehsuI-pnZzO_W_L5YZqOJ62mGy1ycvp-SfyYsd@ssdXF4rassOLhYgOptFO9_oGo2w7_mypWDjyMlnVk7Uylh_QDOfuCdgVfI_g8ZU1r85SN3EzNVyaWl0r4QhbnkDpVAlzLbs36alhqWIBM47P724s4-n73ahTRssIs6uYr4SQ  --specialization ai-agents-python
-
-
-----------------------------------------------------------------------------------
 
 
 
