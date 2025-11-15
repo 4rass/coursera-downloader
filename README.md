@@ -1,3 +1,38 @@
+# 4rass
+
+This is the commands i used to run on macOS (zsh): 
+
+create folder where i want the project and files, then git clone.
+
+cd to project, then:
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+
+pip install -e .
+
+Confirm installation and view help:
+cs-dlp --help
+# or run module directly without installing:
+python -m cs_dlp.main --help
+
+# Use browser cookie from Chrome (you must be logged into coursera in Chrome)
+cs-dlp --cauth-auto chrome modelthinking-004
+
+# Resume a download
+cs-dlp --cauth-auto chrome --resume sdn1-001
+
+
+Final command with coockie that copied from Chrome, coockie name 'CAUTH'
+and i insert to the next step.
+
+cs-dlp --cauth q5zLj7psXsiklRaUaWVImEtJBRch2-wfZFwCCV9dYM9KCtgN-bdIMYXjm5oJ-PpCjmwz7H1ml3QZ-Jvqasddaad—21ookdcFGGjs21lGMtUdpie8w.6a12xssPLZquSasdiG$#1_FrMnOboGLK2rNXCCjiki35a6d/=/*592dSdEisadbBSy4RjsLZmm08lFyfIB861plsa#@11SjAlrQ-6OhDRp1GLboAHREu-ZxaQgUBUK2FE2gR4cBJgTd8WDvwTzCED3Pf-t-GOGhauejhaVsdaoSFdLDvrP43UInmS4gtBAj2roUAvIODAjQipphEke3jLiMTXc0wNpQ7Kldo4ras4ras4oilLDccX1M-BI2-oYmnsPehsuI-pnZzO_W_L5YZqOJ62mGy1ycvp-SfyYsd@ssdXF4rassOLhYgOptFO9_oGo2w7_mypWDjyMlnVk7Uylh_QDOfuCdgVfI_g8ZU1r85SN3EzNVyaWl0r4QhbnkDpVAlzLbs36alhqWIBM47P724s4-n73ahTRssIs6uYr4SQ  --specialization ai-agents-python
+
+
+----------------------------------------------------------------------------------
+
+
+
 # cs-dlp
 
 This is a fork of [coursera-dl](https://github.com/coursera-dl/coursera-dl) that works with modern Python and modern coursera.org, with added features and patches.
